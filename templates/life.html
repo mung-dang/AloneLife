@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <style>
+        .main_total{
+            margin: 70px 100px 10px 100px;
+        }
+        .title_name{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .main_btn_group{
+            width: 100%;
+        }
+        .main_btn{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .store_info{
+            width: 100%;
+            height: 270px;
+
+            padding: 30px 30px 30px 30px;
+            background-color: brown;
+        }
+        .store_one{
+            width: 100%;
+            height: 150px;
+
+            margin-top: 20px;
+
+            display: flex;
+            flex-direction: row;
+
+            background-color: green;
+        }
+        .write_img{
+            width: 40px;
+            height: 40px;
+
+            margin: 20px 20px 20px 20px;
+        }
+        .write_input{
+            width: 600px;
+            height: 100px;
+
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+    <title>나는 자취생이다</title>
+
+</head>
+<body>
+    <div class="main_total">
+
+        <div>
+            <h1 class="title_name" onclick="location.href='http://127.0.0.1:5000/'">나는 자취생이다</h1>
+        </div>
+        <div>
+            <div class="btn-group main_btn_group" role="group" aria-label="Basic example">
+                <btuton type="button" class="btn btn-secondary main_btn" onclick="location.href=''">생활/청소</btuton>
+                <button type="button" class="btn btn-secondary main_btn" onclick="location.href='http://127.0.0.1:5000/food'">음식</button>
+            </div>
+        </div>
+        <div style="text-align: center">
+            <img src="/static/write-pixa.png" class="write_img">
+            <div style="text-align: center;">
+                <input class="write_input">
+            </div>
+            <button>올리기</button>
+        </div>
+
+    </div>
+</body>
+</html>
