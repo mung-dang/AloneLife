@@ -2,91 +2,162 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-
+    <title>Title</title>
     <style>
-        .main_total{
-            margin: 70px 200px 10px 200px;
-        }
-        .title_name{
-            width: 500px;
-            margin-bottom: 30px;
-        }
-        .main_btn_group{
-            width: 1500px;
-        }
-        .main_btn{
+        .wrap{
             width: 100%;
-            margin-bottom: 30px;
+            height: 100%;
+            text-align: center;
         }
-        .low_menu{
-            width: 1500px;
+        .total{
+            width: 70%;
+            height: 100%;
+            margin: auto;
+            background-color: #F3F3F3;
+            padding-top: 1px;
+            border: solid grey 2px;
+            text-align: center;
+        }
+        .title{
+            width: 80%;
+            height: 15%;
+            border-bottom: double #3A3A3A 7px;
+            margin: auto;
+        }
+        .title_txt{
+            padding-top: 5%;
+            font-size: 80px;
+        }
+        .menu{
+            width: 80%;
+            height: 50px;
+            margin: auto;
+            border-bottom: solid #3A3A3A 2px;
+        }
+        .menu_in{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+        .first_btn{
+            width: 50%;
+            height: 35px;
+            padding-top: 15px;
+            float: left;
+        }
+        .second_btn{
+            width: 50%;
+            height: 35px;
+            padding-top: 15px;
+            float: left;
+        }
+        .body{
+            width: 80%;
+            height: 1000px;
+            background-color: darkcyan;
+            margin: auto;
+            padding-top: 1px;
+        }
+        .body-in{
+            width: 99%;
+            margin: auto;
         }
         .store_info{
-            width: 1200px;
-            height: 800px;
-            padding: 30px 30px 30px 30px;
-            background-color: brown;
+            float: left;
+            width: 70%;
+            height: 100%;
+            margin-left: 2%;
+            background-color: white;
+            border-right: solid #3A3A3A 1px;
+            padding-top: 1px;
         }
-        .store_one{
-            text-align: center;
-            width: 800px;
+        .store_name{
+            margin-top: 10px;
+        }
+        .gs_store{
+            clear: left;
+            width: 89%;
             height: 200px;
-            margin-top: 20px;
-            background-color: green;
+            margin: 1% 0 2% 5%;
+            border: solid lightgrey 2px;
+            border-radius: 10px;
         }
-        .store_in{
-
+        .goods{
+            float: left;
+            width: 150px;
+            height: 160px;
+            background-color: coral;
+            margin-left: 4px;
+            padding: 20px 10px 20px 10px;
+        }
+        .img{
+            margin-bottom: 10px;
+        }
+        .price{
+            margin-top: 5px;
+        }
+        .recommend{
+            float: left;
+            width: 25%;
+            height: 850px;
+            background-color: white;
+        }
+        .wash_tip{
+            padding-top: 10px;
+            font-size: 17px;
+        }
+        .tip_img{
+            width: 245px;
+            height: 800px;
+            margin-top: 10px;
         }
     </style>
+    <script type="javascript">
 
-    <title>나는 자취생이다</title>
-
+    </script>
 </head>
 <body>
-    <div class="main_total">
-
-        <div>
-            <h1 class="title_name" onclick="location.href='http://127.0.0.1:5000/'">나는 자취생이다</h1>
-        </div>
-        <div>
-            <div class="btn-group main_btn_group" role="group" aria-label="Basic example">
-                <btuton type="button" class="btn btn-secondary main_btn" onclick="location.href='http://127.0.0.1:5000/life'">생활/청소</btuton>
-                <button type="button" class="btn btn-secondary main_btn" onclick="location.href='http://127.0.0.1:5000/food'">음식</button>
+    <div class="wrap">
+        <div class="total">
+            <div class="title">
+                <h1 class="title_txt">자취생 소식지</h1>
             </div>
-        </div>
-        <div class="low_menu">
-            <div class="store_info">
-                <h5>편의점 정보</h5>
-                <div class="store_one">
-                    <button> 전</button>
-                    <div class="store_in">
-                        사진
-                        이름
-                        가격
-                    </div>
-                    <button>후</button>
+            <div class="menu">
+                <div class="menu_in">
+                    <div class="first_btn" onclick="location.href='http://127.0.0.1:5000/sign'">생활 기호 보러가기</div>
+                    <div class="second_btn">나눔 장터 바로가기</div>
                 </div>
-
+            </div>
+            <div class="body">
+                <div class="body-in">
+                    <div class="store_info">
+                        <h3>편의점 1+1 소식</h3>
+                        <div class="store_name">GS편의점</div>
+                        <div class="gs_store">
+                            <div class="goods">
+                                <img class="img" src="https://via.placeholder.com/100">
+                                <div>
+                                    <strong class="name">상품명</strong>
+                                    <div class="price">가격</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="store_name">CU편의점</div>
+                        <div class="gs_store">
+                        </div>
+                        <div class="store_name">세븐일레븐</div>
+                        <div class="gs_store">
+                        </div>
+                    </div>
+                    <div class="recommend">
+                        <div class="wash_tip">
+                            자취할 때<br>
+                            알면 좋은 정보
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 </body>
 </html>

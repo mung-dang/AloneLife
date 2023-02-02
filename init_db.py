@@ -10,33 +10,34 @@ from webdriver_manager.chrome import ChromeDriverManager
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.implicitly_wait(3)
 
-driver.get('https://cu.bgfretail.com/event/plus.do?category=event&depth2=1&sf=N')
+driver.get('http://gs25.gsretail.com/gscvs/ko/products/event-goods')
+wait = WebDriverWait(driver, 10)
 
-cu_goods_name = []
-cu_goods_img = []
-cu_goods_price = []
+gs_goods_name = []
+gs_goods_img = []
+gs_goods_price = []
 
-driver.execute_script("javascript:goDepth('23');")
 i = 0
-while i < 4:
-    driver.execute_script("javascript:nextPage(1);")
+while i < 33:
     i += 1
-
-while len(cu_goods_name) % 40 == 0:
     html_store = driver.page_source
     soup = BeautifulSoup(html_store, 'html.parser')
-    goods = soup.find_all('li', class_="prod_list")
+    goods = soup.find('ul', class_="prod_list")
     for good in goods:
-        good_img = good.find('img')['src']
-        if good_img in 'https:':
-            cu_goods_img.append(good_img)
-        else:
-            cu_goods_img.append('https:' + good_img)
-        good_name = good.find('div', class_="name")
-        cu_goods_name.append(good_name.text)
-        good_price = good.find('div', class_="price")
-        cu_goods_price.append(good_price.text)
+        try:
+            good_img = good.find('img')['src']
+            gs_goods_img.append(good_img)
+            good_name = good.find('p', class_="tit")
+            gs_goods_name.append(good_name.text)
+            good_price = good.find('p', class_="price")
+            gs_goods_price.append(good_price.text)
+        except:
+            break
 
-print(cu_goods_name)
-print(cu_goods_img)
-print(cu_goods_price)
+    driver.execute_script("goodsPageController.moveControl(1)")
+    element2 = wait.until(EC.visibility_of_element_located(
+        (By.XPATH, '//*[@id="contents"]/div[2]/div[3]/div/div/div[1]/ul')))
+
+print(gs_goods_name)
+print(gs_goods_price)
+print(gs_goods_img)

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrap{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .total{
+            width: 70%;
+            height: 100%;
+            margin: auto;
+            background-color: #F3F3F3;
+            padding-top: 1px;
+            border: solid grey 2px;
+            text-align: center;
+        }
+        .title{
+            width: 80%;
+            height: 15%;
+            border-bottom: double #3A3A3A 7px;
+            text-align: center;
+            margin: auto;
+        }
+        .title_img{
+            width: 70%;
+            padding-top: 5%;
+            text-align: center;
+        }
+        .menu{
+            width: 80%;
+            height: 50px;
+            margin: 0 auto 0 auto;
+            border-bottom: solid #3A3A3A 2px;
+        }
+        .menu_in{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+        .first_btn{
+            width: 50%;
+            height: 100%;
+            padding: 15px 0 15px 0;
+            float: left;
+        }
+        .second_btn{
+            width: 50%;
+            height: 100%;
+            padding-top: 15px;
+            float: left;
+        }
+        .body{
+            width: 80%;
+            height: 100%;
+            background-color: darkcyan;
+            margin: auto auto 60px auto;
+            padding-top: 1px;
+        }
+        .body_in{
+            width: 99%;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+        .body_title{
+            margin: 40px 0 40px 0;
+            font-size: 25px;
+        }
+        .wash_title{
+            margin:20px 0 10px 0;
+            font-size: 19px;
+        }
+        .wash_txt{
+            font-size: 15px;
+            margin: 5px 0 5px 0;
+        }
+        .signs_box{
+            width: 100%;
+            height: 100%;
+            background: white;
+            padding-top: 5px;
+            border-radius: 3px;
+        }
+        .signs{
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            margin: 5px 0 5px 0;
+        }
+    </style>
+    <script type="javascript">
+
+    </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="total">
+            <div class="title">
+                <img class="title_img" src="../static/title.png">
+            </div>
+            <div class="menu">
+                <div class="menu_in">
+                    <div class="first_btn" onclick="location.href='http://127.0.0.1:5000/sign'">생활 기호 보러가기</div>
+                    <div class="second_btn">나눔 장터 바로가기</div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="body_in">
+                    <div class="body_title">
+                        실생활에서 볼 수 있는 기호들을 알아보자!
+                    </div>
+                    <div>
+                        <div class="wash_title">
+                            세탁기호
+                        </div>
+                        <div class="wash_txt">
+                            ※ 주의할 점<br>
+                            해당 모양에 X 표시가 되어있으면 하면 안 된다는 표시
+                        </div>
+                        <div class="signs_box">
+                            <img class="signs" src="../static/wash_001.jpg"
+                                 onclick="swal({
+                                text:`세탁기 사용과 손세탁 모두 가능하다
+                                    온도, 세제 종류가 쓰여있으면 적힌 대로 세탁한다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/wash_002.jpg"
+                                 onclick="swal({
+                                text:`손세탁만 가능하다
+                                    온도, 세제 종류가 쓰여있으면 적힌 대로 세탁한다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/wash_003.jpg"
+                                 onclick="swal({
+                                text:`표백제를 사용하는 경우에는
+                                    삼각형 내부에 쓰여있는 표백제를 사용한다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/wash_004.jpg"
+                                 onclick="swal({
+                                text:`모양 안에 쓰여있는 온도로 다림질한다
+                                    아래에 ~표시가 있으면 헝겊을 덮고 다린다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/wash_005.jpg"
+                                 onclick="swal({
+                                text:`퍼클로로에틸렌/석유계 용제를 사용해 드라이클리닝한다
+                                    석유계라고 쓰여있으면 석유계 용제로만 드라이클리닝한다
+                                    아래에 밑줄 표시가 있으면 전문점에서만 드라이클리닝한다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/wash_006.jpg"
+                                 onclick="swal({
+                                text:`'약하게'라고 쓰여있으면 손으로 약하게 짜거나
+                                    탈수기를 '단시간'만 이용한다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/wash_007.jpg"
+                                 onclick="swal({
+                                text:`햇빛을 이용해 건조한다
+                                    모양 안에 쓰여있는 내용에 따라
+                                    옷걸이에 걸거나 뉘어서 건조한다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/wash_008.jpg"
+                                 onclick="swal({
+                                text:`그늘에서 건조한다
+                                    모양 안에 쓰여있는 내용에 따라
+                                    옷걸이에 걸거나 뉘어서 건조한다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/wash_009.jpg"
+                                 onclick="swal({
+                                text:`기계 건조가 가능하다`,
+                                button: '알았어요!'})">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="wash_title">
+                            전용 용기 기호
+                        </div>
+                        <div class="signs_box">
+                            <img class="signs" src="../static/container_001.jpg"
+                                 onclick="swal({
+                                text: `전자레인지에 돌려도 된다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/container_002.jpg"
+                                 onclick="swal({
+                                text: `전자레인지에 돌려도 된다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/container_003.jpg"
+                                 onclick="swal({
+                                text: `냉동실에 넣어도 된다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/container_004.jpg"
+                                 onclick="swal({
+                                text: `식품을 담는데 사용해도 된다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/container_005.jpg"
+                                 onclick="swal({
+                                text: `인덕션에 사용할 수 있다`,
+                                button: '알았어요!'})">
+                            <img class="signs" src="../static/container_006.jpg"
+                                 onclick="swal({
+                                text: `인덕션에 사용할 수 있다`,
+                                button: '알았어요!'})">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
