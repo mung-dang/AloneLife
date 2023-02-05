@@ -3,6 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script type="javascript">
+        function readStore(){
+            $.ajax({
+                type: "GET",
+                url: "/gs",
+                data: {},
+                success: function (response){
+                    let gs_store = response['all_gs']
+                    for (let i = 0; i < gs_store.length; i++){
+                        let number = gs_store[i]['number']
+                        let name = gs_store[i]['name']
+                        let img = gs_store[i]['img']
+                        let price = gs_store[i]['price']
+                    }
+
+                }
+            })
+        }
+    </script>
     <style>
         .wrap{
             width: 100%;
@@ -24,9 +44,10 @@
             border-bottom: double #3A3A3A 7px;
             margin: auto;
         }
-        .title_txt{
+        .title_img{
+            width: 70%;
             padding-top: 5%;
-            font-size: 80px;
+            text-align: center;
         }
         .menu{
             width: 80%;
@@ -41,54 +62,57 @@
         }
         .first_btn{
             width: 50%;
-            height: 35px;
+            height: 100%;
             padding-top: 15px;
             float: left;
         }
         .second_btn{
             width: 50%;
-            height: 35px;
+            height: 100%;
             padding-top: 15px;
             float: left;
         }
         .body{
             width: 80%;
-            height: 1000px;
+            height: 100%;
             background-color: darkcyan;
-            margin: auto;
+            margin: auto auto 60px auto;
             padding-top: 1px;
         }
         .body-in{
             width: 99%;
             margin: auto;
+            padding-bottom: 50px;
         }
         .store_info{
-            float: left;
+            display: inline-block;
             width: 70%;
             height: 100%;
-            margin-left: 2%;
             background-color: white;
             border-right: solid #3A3A3A 1px;
             padding-top: 1px;
+        }
+        .store_title{
+            margin: 40px 0 40px 0;
+            font-size: 20px;
         }
         .store_name{
             margin-top: 10px;
         }
         .gs_store{
-            clear: left;
-            width: 89%;
-            height: 200px;
-            margin: 1% 0 2% 5%;
+            width: 85%;
+            height: 100%;
+            margin: 10px auto 15px auto;
             border: solid lightgrey 2px;
             border-radius: 10px;
+            padding: 5px;
         }
         .goods{
-            float: left;
-            width: 150px;
-            height: 160px;
+            display: inline-block;
+            width: 110px;
+            height: 150px;
             background-color: coral;
-            margin-left: 4px;
-            padding: 20px 10px 20px 10px;
+            padding: 15px 10px 20px 10px;
         }
         .img{
             margin-bottom: 10px;
@@ -97,30 +121,22 @@
             margin-top: 5px;
         }
         .recommend{
-            float: left;
+            display: inline-block;
             width: 25%;
-            height: 850px;
+            height: 100%;
             background-color: white;
         }
         .wash_tip{
             padding-top: 10px;
             font-size: 17px;
         }
-        .tip_img{
-            width: 245px;
-            height: 800px;
-            margin-top: 10px;
-        }
     </style>
-    <script type="javascript">
-
-    </script>
 </head>
 <body>
     <div class="wrap">
         <div class="total">
             <div class="title">
-                <h1 class="title_txt">자취생 소식지</h1>
+                <img class="title_img" src="../static/title.png" onclick="location.href='http://127.0.0.1:5000/'">
             </div>
             <div class="menu">
                 <div class="menu_in">
@@ -131,15 +147,28 @@
             <div class="body">
                 <div class="body-in">
                     <div class="store_info">
-                        <h3>편의점 1+1 소식</h3>
+                        <div class="store_title">편의점 1+1 소식</div>
                         <div class="store_name">GS편의점</div>
                         <div class="gs_store">
                             <div class="goods">
-                                <img class="img" src="https://via.placeholder.com/100">
-                                <div>
-                                    <strong class="name">상품명</strong>
-                                    <div class="price">가격</div>
-                                </div>
+                                <img class="img" src="https://via.placeholder.com/100"><br>
+                                <strong class="name">상품명</strong>
+                                <div class="price">가격</div>
+                            </div>
+                            <div class="goods">
+                                <img class="img" src="https://via.placeholder.com/100"><br>
+                                <strong class="name">상품명</strong>
+                                <div class="price">가격</div>
+                            </div>
+                            <div class="goods">
+                                <img class="img" src="https://via.placeholder.com/100"><br>
+                                <strong class="name">상품명</strong>
+                                <div class="price">가격</div>
+                            </div>
+                            <div class="goods">
+                                <img class="img" src="https://via.placeholder.com/100"><br>
+                                <strong class="name">상품명</strong>
+                                <div class="price">가격</div>
                             </div>
                         </div>
                         <div class="store_name">CU편의점</div>
@@ -153,6 +182,8 @@
                         <div class="wash_tip">
                             자취할 때<br>
                             알면 좋은 정보
+                        </div>
+                        <div>
                         </div>
                     </div>
                 </div>
